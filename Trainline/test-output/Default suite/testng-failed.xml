@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="automationFramework.Exercise7">
+        <methods>
+          <include name="verifyPricepage"/>
+          <include name="selectSubmit"/>
+          <include name="insertLocation"/>
+          <include name="verifyHomepage"/>
+          <include name="insertDate"/>
+        </methods>
+      </class> <!-- automationFramework.Exercise7 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite">
+
+  <test name="Firefox Test">
+  <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="automationFramework.Exercise7"/>
+    </classes>
+  </test>
+    
+      
+  <test name="Chrome Test">
+  <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="automationFramework.Exercise7"/>
+    </classes>
+</test>
+    
+    
+    <test name="safari Test">
+    <parameter name="browser" value="Safari"/>
+    <classes>
+      <class name="automationFramework.Exercise7"/>
+    </classes>
+  </test>
+
+</suite>
