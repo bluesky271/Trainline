@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Parallel test suite]">
-  <parameter name="browser" value="Safari"/>
+  <parameter name="browser" value="Chrome"/>
   <test name="Firefox Test(failed)">
     <parameter name="browser" value="Firefox"/>
     <classes>
@@ -12,10 +12,8 @@
           <include name="finish"/>
           <include name="openBrowser"/>
           <include name="openBrowser"/>
-          <include name="openBrowser"/>
           <include name="selectSubmit"/>
           <include name="insertLocation"/>
-          <include name="verifyHomepage"/>
           <include name="insertDate"/>
         </methods>
       </class> <!-- automationFramework.Exercise7 -->
@@ -31,32 +29,11 @@
           <include name="finish"/>
           <include name="openBrowser"/>
           <include name="openBrowser"/>
-          <include name="openBrowser"/>
           <include name="selectSubmit"/>
           <include name="insertLocation"/>
-          <include name="verifyHomepage"/>
           <include name="insertDate"/>
         </methods>
       </class> <!-- automationFramework.Exercise7 -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
-  <test name="safari Test(failed)">
-    <parameter name="browser" value="Safari"/>
-    <classes>
-      <class name="automationFramework.Exercise7">
-        <methods>
-          <include name="verifyPricepage"/>
-          <include name="finish"/>
-          <include name="finish"/>
-          <include name="openBrowser"/>
-          <include name="openBrowser"/>
-          <include name="openBrowser"/>
-          <include name="selectSubmit"/>
-          <include name="insertLocation"/>
-          <include name="verifyHomepage"/>
-          <include name="insertDate"/>
-        </methods>
-      </class> <!-- automationFramework.Exercise7 -->
-    </classes>
-  </test> <!-- safari Test(failed) -->
 </suite> <!-- Failed suite [Parallel test suite] -->

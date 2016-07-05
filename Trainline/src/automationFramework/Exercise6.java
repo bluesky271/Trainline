@@ -73,7 +73,7 @@ public class Exercise6 {
 	@AfterTest
 	public void finish()
 	{
-		driver.close();
+		driver.quit();
 		System.out.println("All done");
 	}
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
+//import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -16,8 +16,7 @@ import org.testng.annotations.Test;
 public class Exercise7 {
 	
 	
-	private WebDriver driver;
-	Homepage homepage = new Homepage(driver);
+	WebDriver driver;
 	
 	//public variables
 	public String URL = "https://www.thetrainline.com";
@@ -34,31 +33,30 @@ public class Exercise7 {
 				
 			} else if (browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
-						"/Users/ngoulongkam/Documents/workspace/crhomedriver");
+						"C:\\Users\\grad.tester.centre4\\workspace\\chromedriver.exe");
 				driver = new ChromeDriver();
-				
-			} else if (browser.equalsIgnoreCase("Safari")) {
-				driver = new SafariDriver();
 			}
-		
-		} catch (WebDriverException e) {
+		}
+				
+			/*} else if (browser.equalsIgnoreCase("Safari")) {
+				driver = new SafariDriver();
+			}*/
+	
+			catch (WebDriverException e) {
 			System.out.println(e.getMessage());
-			
-			driver.get(URL);
-			driver.manage().window().maximize();
 			
 		}
 	}
 	
 	
-	/*
-	@BeforeTest
+	
+	@Test(priority = 0)
 	public void goHomepage() 
 	{
 		driver.get(URL);
 		driver.manage().window().maximize();
 	}
-	*/
+	
 	@Test (priority = 1)
 	public void verifyHomepage()
 	{
@@ -69,7 +67,7 @@ public class Exercise7 {
 	@Test (priority = 2)
 	public void insertLocation()
 	{
-		
+		Homepage homepage = new Homepage(driver);
 		homepage.from.sendKeys(fromLocation);
 		homepage.to.sendKeys(toLocation);
 	}
@@ -77,6 +75,7 @@ public class Exercise7 {
 	@Test (priority = 3)
 	public void insertDate()
 	{
+		Homepage homepage = new Homepage(driver);
 		if (homepage.oneway.isSelected())
 		{
 			homepage.oneway.click();
@@ -89,6 +88,7 @@ public class Exercise7 {
 	@Test (priority = 4)
 	public void selectSubmit()
 	{
+		Homepage homepage = new Homepage(driver);
 		homepage.submit.click();
 	}
 	
@@ -105,7 +105,7 @@ public class Exercise7 {
 	@AfterTest
 	public void finish()
 	{
-		driver.close();
+		driver.quit();
 		System.out.println("All done");
 	}
 }
